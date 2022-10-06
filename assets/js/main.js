@@ -48,9 +48,6 @@ data.forEach(useData)
 titleCard.forEach(changeTitle)
 timeActual.forEach(changeActualTime)
 timeComparation.forEach(changeTimeComparation)
-console.log(date)
-
-
 
 function useData(item, index) {
     titles[index] = item

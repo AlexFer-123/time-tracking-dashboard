@@ -29,6 +29,11 @@ h2 {
     font-weight: var(--font-w-thin);
 }
 
+span{
+    font-weight: var(--font-w-black);
+    color: var(--bg-light-purple);
+}
+
 body {
     background-color: var(--bg-black);
     font-family: 'Rubik', sans-serif;
@@ -81,6 +86,12 @@ margin-bottom: 4rem;
     background: none;
     border: none;
     cursor: pointer;
+    font-weight: 400;
+    transition: .3s all ease-in-out;
+    font-family: 'Rubik', sans-serif;
+}
+.profile .menu .options button:hover {
+    color: var(--bg-light-purple);
 }
 .profile .menu .options button.active {
     color: white;
@@ -170,6 +181,11 @@ margin-bottom: 4rem;
     border-radius: 50px;
     background-color: var(--bg-purple);
     margin-left: .15rem;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+}
+.card .head-card .pointers:hover .pointer {
+    background-color: white;
 }
 
 .card .head-card .time-activity {
@@ -188,3 +204,113 @@ margin-bottom: 4rem;
     font-weight: var(--font-w-normal);
     color: var(--bg-purple)
 } 
+
+@media (min-width: 1258px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    section {
+        flex-direction: row;
+        width: 1240px;
+
+    }
+
+    h2 {
+        font-size: 3.2rem;
+        font-weight: var(--font-w-thin);
+    }
+
+
+    .profile {
+        margin-right: 2rem;
+
+    }
+
+    .profile .menu {
+        width: 290px; 
+        flex-direction: column;
+    } 
+
+    .profile .menu .profile-content {
+        flex-direction: column;
+        padding: 2.5rem 2rem;
+        height: 320px;
+    }
+
+    .profile .menu .options {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .profile .menu .options button {
+        padding: 0 2rem 2rem 2rem;
+        font-size: 18px;
+    }
+
+    .profile .menu .profile-content img{
+        width: 100px;
+        margin-right: 1rem;
+        border: 3px solid white;
+        border-radius: 50%; 
+        margin-bottom: 2.5rem; 
+    }
+
+    .card {
+        width: 330px;
+        margin-top: 2rem;
+        display: flex;
+        border-radius: 1rem;
+        flex-direction: column;
+    }
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .card {
+        width: 270px;
+        margin: 1rem 2rem 2rem 0;
+        flex-direction: column;
+    }
+    .card .banner {
+        display: flex;
+        height: 3.5rem;
+        justify-content: end;
+        align-items: center;
+    }
+    .card .banner img{
+        transform: scale(1.2);
+        clip-path:inset(19px 0);
+     }
+    .card .head-card .time-activity {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: .5rem 0;
+    }
+    .card .banner img.exercise{
+        clip-path:inset(4px 0);
+    }
+    .card .banner img.social{
+        clip-path:inset(30px 0);
+    }
+    .card .head-card .time-activity .time {
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+        font-size: 3.5rem;
+    }
+    .card .head-card .time-activity .routine {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    } 
+
+}
