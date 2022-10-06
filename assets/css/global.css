@@ -43,10 +43,12 @@ flex-direction: column;
 justify-content: center; 
 align-items: center;
 margin-top: 4rem;
+margin-bottom: 4rem;
 }
 
 .profile, .cards {
     display: flex;
+    flex-direction: column;
     justify-content: center; 
 }
 
@@ -78,6 +80,10 @@ margin-top: 4rem;
     color: var(--bg-purple);
     background: none;
     border: none;
+    cursor: pointer;
+}
+.profile .menu .options button.active {
+    color: white;
 }
 
 .profile .menu .profile-content img{
@@ -89,28 +95,53 @@ margin-top: 4rem;
 
 /* Cards */
 
-#card {
+.card {
     width: 330px;
-    background-color:  var(--color-work);
     margin-top: 2rem;
     display: flex;
     border-radius: 1rem;
     flex-direction: column;
 }
-
-#card .banner {
+#social {
+    background-color: var(--color-social);
+}
+#work {
+    background-color: var(--color-work);
+}
+#exercise {
+    background-color: var(--color-exercise);
+}
+#self-care {
+    background-color: var(--color-selfcare);
+}
+#play {
+    background-color: var(--color-play);
+}
+#study {
+    background-color: var(--color-study);
+}
+.card .banner {
     display: flex;
     height: 2.2rem;
     justify-content: end;
     align-items: center;
 }
 
-#card .banner svg{
+.card .banner img{
+    transform: scale(1);
+    width: 5rem;
     display: flex;
-    clip-path:inset(23px 0);
+    clip-path:inset(22.5px 0);
+    margin-right: 1rem;
+}
+.card .banner img.exercise{
+    clip-path:inset(10px 0);
+}
+.card .banner img.social{
+    clip-path:inset(37px 0);
 }
 
-#card .head-card {
+.card .head-card {
     background-color: var(--bg-color);
     padding: 1rem;
     border-radius: .8rem;
@@ -119,19 +150,19 @@ margin-top: 4rem;
 .d-flex {
     display: flex;
 }
-#card .head-card .header-card {
+.card .head-card .header-card {
     padding-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#card .head-card .title {
+.card .head-card .title {
     font-size: 18px;
     font-weight: var(--font-w-black);
 }
 
-#card .head-card .pointer {
+.card .head-card .pointer {
     display: inline-flex;
     flex-direction: row;
     width: .3rem;
@@ -141,18 +172,18 @@ margin-top: 4rem;
     margin-left: .15rem;
 }
 
-#card .head-card .time-activity {
+.card .head-card .time-activity {
     display: flex;
     justify-content: space-between;
     margin: .5rem 0;
     align-items: center;
 }
 
-#card .head-card .time-activity .time {
+.card .head-card .time-activity .time {
     font-size: 2.5rem;
     font-weight: var(--font-w-thin);
 }
-#card .head-card .time-activity .routine {
+.card .head-card .time-activity .routine {
     font-size: .9rem;
     font-weight: var(--font-w-normal);
     color: var(--bg-purple)
